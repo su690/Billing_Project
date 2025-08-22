@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            Billing Page
+        </title>
+        <script>
+            function show(){
+                var q = document.billForm.q1.value;
+                var p = document.billForm.p1.value;
+                alert("welcome to Billing Page. quantity is "+q+" and price is "+p);
+                var ga = q*p;
+                var dis=0;
+                if(ga>10000){
+                    dis = ga*0.1;
+                }
+                var na = ga-dis;
+                alert("Total amaount is "+ga+" and discount is "+dis);
+                alert("Net amount is "+na);
+                document.billForm1.q1.value=q;
+                document.billForm1.p1.value=p;
+                document.billForm1.ga1.value=ga;
+                document.billForm1.dis1.value=dis;
+                document.billForm1.na1.value=na;
+                return false;
+               
+            }
+
+        </script>
+    </head>
+    <body bgcolor="lightblue">
+        <h1 align="center" >Billing Information</h1><br><hr>
+        <form name="billForm" onsubmit="return show()">    
+            <table bgcolor="white" align="left" border="1" height="300" width="200" cellspacing="1" cellpadding="10">
+               <tr><th> No of Item</th> <td> <input type="text" name="q1" placeholder="Enter No of Items"></td></tr>
+               <tr><th> Price of Item</th> <td> <input type="text" name="p1" placeholder="price of Items"></td></tr>
+            </th></tr>
+            <tr><th colspan="2"><input type="submit" value="Billing"></th></tr>
+        </form>
+        <form name="billForm1" onsubmit="return show()">
+            <table bgcolor="white" align="right" border="1" height="300 " width="200" cellspacing="1" cellpadding="10">
+               <tr><th>No of item</th> <td><input type="text" name="q" placeholder="Enter No of Items"></td></tr>
+               <tr><th> Price of Item</th> <td> <input type="text" name="p" placeholder="price of Items"></td></tr>
+               <tr><th> Gross Amount</th> <td> <input type="text" name="ga1" placeholder="Gross Amount"></td></tr>
+               <tr><th> Discount</th> <td> <input type="text" name="dis1" placeholder="Total Discount"></td></tr>
+               <tr><th> Net Amount</th> <td> <input type="text" name="na1" placeholder="Net Amount To Pay"></td></tr>
+            </table>
+            </form>
+
+    </body>
+</html>
