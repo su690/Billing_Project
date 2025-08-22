@@ -16,33 +16,70 @@
                 var na = ga-dis;
                 alert("Total amaount is "+ga+" and discount is "+dis);
                 alert("Net amount is "+na);
-                document.billForm1.q1.value=q;
-                document.billForm1.p1.value=p;
-                document.billForm1.ga1.value=ga;
-                document.billForm1.dis1.value=dis;
-                document.billForm1.na1.value=na;
+                document.billForm1.q.value=q;
+                document.billForm1.p.value=p;
+                document.billForm1.ga.value=ga;
+                document.billForm1.dis.value=dis;
+                document.billForm1.na.value=na;
                 return false;
                
             }
 
         </script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: rgb(198, 180, 180);
+            }
+            h1 {
+                color: darkblue;
+            }
+            table {
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+            th {
+                background-color: wheat;
+            }
+            input[type="text"] {
+                width: 100%;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+            input[type="submit"] {
+                background-color: darkblue;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body bgcolor="lightblue">
+       
         <h1 align="center" >Billing Information</h1><br><hr>
-        <form name="billForm" onsubmit="return show()">    
-            <table bgcolor="white" align="left" border="1" height="300" width="200" cellspacing="1" cellpadding="10">
+         
+       
+        
+         <form name="billForm" onsubmit="return show()">    
+            <table bgcolor="wheat" align="left" border="1" height="300" width="200" cellspacing="1" cellpadding="10">
                <tr><th> No of Item</th> <td> <input type="text" name="q1" placeholder="Enter No of Items"></td></tr>
                <tr><th> Price of Item</th> <td> <input type="text" name="p1" placeholder="price of Items"></td></tr>
             </th></tr>
             <tr><th colspan="2"><input type="submit" value="Billing"></th></tr>
         </form>
+       
         <form name="billForm1" onsubmit="return show()">
-            <table bgcolor="white" align="right" border="1" height="300 " width="200" cellspacing="1" cellpadding="10">
+            <table bgcolor="wheat" align="right" border="1" height="300 " width="200" cellspacing="1" cellpadding="10">
                <tr><th>No of item</th> <td><input type="text" name="q" placeholder="Enter No of Items"></td></tr>
                <tr><th> Price of Item</th> <td> <input type="text" name="p" placeholder="price of Items"></td></tr>
-               <tr><th> Gross Amount</th> <td> <input type="text" name="ga1" placeholder="Gross Amount"></td></tr>
-               <tr><th> Discount</th> <td> <input type="text" name="dis1" placeholder="Total Discount"></td></tr>
-               <tr><th> Net Amount</th> <td> <input type="text" name="na1" placeholder="Net Amount To Pay"></td></tr>
+               <tr><th> Gross Amount</th> <td> <input type="text" name="ga" placeholder="Gross Amount"></td></tr>
+               <tr><th> Discount</th> <td> <input type="text" name="dis" placeholder="Total Discount"></td></tr>
+               <tr><th> Net Amount</th> <td> <input type="text" name="na" placeholder="Net Amount To Pay"></td></tr>
             </table>
             </form>
 
